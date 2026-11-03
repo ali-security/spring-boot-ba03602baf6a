@@ -308,6 +308,7 @@ class UndertowServletWebServerFactoryTests extends AbstractServletWebServerFacto
 	}
 
 	@Test
+	@Disabled("TLS_RSA_* key-exchange cipher suites are disabled by default in current JDK security policy")
 	void sslRestrictedProtocolsRSATLS12Success() throws Exception {
 		testRestrictedSSLProtocolsAndCipherSuites(new String[] { "TLSv1.2" },
 				new String[] { "TLS_RSA_WITH_AES_128_CBC_SHA256" });

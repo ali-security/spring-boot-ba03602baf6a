@@ -1,8 +1,6 @@
 name: Run System Tests
 on:
-  push:
-    branches:
-      - '3.3.x'
+  workflow_dispatch:
 jobs:
   run-system-tests:
     name: 'Java ${{ matrix.java.version}}'
